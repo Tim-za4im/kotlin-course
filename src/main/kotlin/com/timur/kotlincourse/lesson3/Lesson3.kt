@@ -1,4 +1,7 @@
 package com.timur.kotlincourse.lesson3
+
+import com.sun.jdi.Value
+
 //Погрузимся в атмосферу "Hackathon Survival": Марафон, где участники пытаются завершить реальный проект в условиях искусственно созданного хаоса (например, часто меняющиеся требования, неожиданные "сбои" в оборудовании)
 //Для каждого из полей подбери наилучший способ хранения из известных тебе. Учитывай такие факторы, как изменяемость, обязательность, возможность начальной установки, ресурсоёмкие вычисления значения, необходимость проверки устанавливаемого значения на валидность или запрет доступа на установку при возможности чтения, публичность и приватность данных.
 //Название мероприятия
@@ -54,11 +57,78 @@ package com.timur.kotlincourse.lesson3
 val HackatonName: String = "Hackathon Survival"
 var dateHackatonName:  String = "10 октября 2024"
 var placeHackatonName: String = "Стадион Зенит"
-// var detailetbudget: int = 1000
-var numbersofmembers: Int =10
-var durationhackaton: Double = 0.0
-val informationSuppliers: String =""
-val statusHackaton: String = ""
+private const val detailetBudget: Int = (200+200)+(300+300)
+var numbersMembers: Int =10
+var durationhackaton: Long =3*60*60
+val informationSuppliers: String = ""
+private val contacktInformationsuppliers: String ="Список контактов и соглашения поставщиков"
+val statusHackaton: String = "Начался"
+var listSponsors : String ="Газпром,Лукойл,Роснефит"
+val budget: Int = 1000
+var signalInterneLevel : String ="0" + "1" + "2" + "3" + "4"
+private var informationEquipment : String = ""
+val nubersTeam: Int=5
+var listTasks: String= ""
+const val evacuationPlan : String = ""
+val listAvailableEquipment : String= ""
+var listFree : String= ""
+lateinit var scheduleParticipants: String
+const val PLANFILS : String= ""
+var listExpertsJury : String= ""
+private val privacyPolicy : String= ""
+private var privateFidbacl : String= ""
+var roomTemperature : Int=23
+val reportInterneConection : String by lazy {""}
+var lightingLevel : String= ""
+var eventLog : String= ""
+val accessMedicalCare : String= ""
+const val INCLUDINGEVUCATIONPLANS : String= ""
+var registretionNumbersEvent :String= ""
+val maxSoundLevel : Int=95
+var soundCheckLevel : Int=0
+ get() = field
+ set(value) {
+         if (value> maxSoundLevel)field+=value
+ }
+var formatEvent : String=""
+var freePlaceRelax: Int=5
+ get() = field
+ set(value) {
+  if (value>0) field += value
+ }
+val planCommunicationPress : String = ""
+ private var detailInfoProectTeams : String= ""
+ lateinit var listAllowed : String
+ val accessResources : String by lazy { "" +
+         "" }
+val listPartner : String=""
+
+val reportMedia : String by lazy { "" +
+        "" }
+val prizeSystem : String= "" +
+        "" +
+        ""
+private const val contactEmergencyServices : String = ""
+val specialConditions : String =""
+lateinit var moodParticipants : String
+val planHacatonDetailed :String by lazy { "" }
+lateinit var nameSpecialGuest : String
+val maxMembers :Int=150
+val standartTimeWorkTeam : Long = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
