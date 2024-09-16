@@ -1,5 +1,4 @@
-package Lesson4
-
+package LesSon4
 val myInt: Int = 42
 val myLongX: Long = 98765432123456789L
 val myFloat: Float = 23.45f
@@ -26,7 +25,7 @@ val myLongG: Long = 1234567890123L
 val myFloatG: Float = 10.01f
 val myDoubleMinus: Double = -273.15
 val myTextSpaceX: String = "SpaceX"
-val myKotlinFunTru: Boolean = true
+const val myKotlinFunTru: Boolean = true
 var emoji: String = "🤯" // “🤯” // Почему то ошибка, хотя Александр уроке сказал,что Char поддержтвает эмодзи
 val numberIntOp : Int = 65535 //‘’  видимо задание внимательность в одиночные кавычки нельзя записать 65535
 val myLongE: Long= 72057594037927935L
