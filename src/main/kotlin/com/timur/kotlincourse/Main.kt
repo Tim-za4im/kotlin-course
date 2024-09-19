@@ -5,13 +5,13 @@ package com.timur.com.timur.kotlincourse
 fun main() {
 
    soundIntensity ( startIntesity = null, standartCoffient )
-    soundIntensity (startIntesity = 6.3, standartCoffient )
+    soundIntensity (startIntesity = 4.3, standartCoffient )
 
 }
 val standartCoffient : Double = 0.5
 
-  fun soundIntensity ( startIntesity: Double? =null , standartCoffient:Double=0.5 ) {
-      val  intensity : Double = if (startIntesity !=null) startIntesity * standartCoffient
-      else 0.0
+  fun soundIntensity ( startIntesity: Double? , standartCoffient:Double=0.5 ) {
+      val  intensity : Double = (startIntesity ?: 0.0) * standartCoffient
+
       println(intensity)
   }
