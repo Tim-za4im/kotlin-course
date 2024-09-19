@@ -3,14 +3,15 @@ package com.timur.com.timur.kotlincourse
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    //val standartCoffient : Double = 0.5
+   soundIntensity ( startIntesity = null, standartCoffient )
+    soundIntensity (startIntesity = 6.3, standartCoffient )
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
 }
+val standartCoffient : Double = 0.5
+
+  fun soundIntensity ( startIntesity: Double? =null , standartCoffient:Double=0.5 ) {
+      val  intensity : Double = if (startIntesity !=null) startIntesity * standartCoffient
+      else 0.0
+      println(intensity)
+  }
