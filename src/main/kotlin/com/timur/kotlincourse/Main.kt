@@ -47,6 +47,6 @@ fun main() {
 // Задача - сообщить об ошибке в случае отсутствия показаний атмосферного давления.
 
 fun meteodata ( atmosferData: String?){
-    val data : atmosferData ?: throw "Все метео данные"
+    //val data : atmosferData ?: throw Expeticion "Все метео данные"
 }
-        println(atmosferData)
+      //  println(atmosferData)
