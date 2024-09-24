@@ -1,6 +1,7 @@
 package Lesson6
 
 import com.sun.source.tree.ImportTree
+import kotlin.math.E
 
 //В каждом задании также нужно валидировать входящие данные, если это имеет смысл.
 //Задание 1: "Определение Сезона"
@@ -72,8 +73,10 @@ fun typeTransport(miles:Int) : String {
 
 
 fun transoport (km :Int ) : String{
+
    return when  {
-       km <1 -> "Пешком"
+       km  < 0 -> "Дома сиди"
+       km < 1 -> "Пешком"
       km  in 1..5 -> "Велосипед"
           else -> "Автотранспорт"
     }
@@ -81,15 +84,11 @@ fun transoport (km :Int ) : String{
 
 
 fun sumBonus (bonus : Int) : Int {
+    if (bonus < 0) throw Exception ("Ошибка")
+    val dif=bonus /100
     return when {
-        bonus <=
-                1000 -> {
-            (bonus / 100) * 2
-        }
-
-        else -> {
-            (bonus / 100) * 5
-        }
+        bonus <= 1000 -> { dif * 2 }
+        else -> { dif * 5 }
 
     }
 }
@@ -100,7 +99,7 @@ fun selectionClothesWeather(tempurature: Int): String {
             tempurature in -29..0 -> "куртка и шапка"
             tempurature in 1..15 -> "ветровка"
             tempurature in 16..35 -> "футболка и шорты"
-            tempurature > 35 -> "рекомендуйте не выходить из дома"
+            35 < tempurature -> "рекомендуйте не выходить из дома"
 
             else ->
                 "нет данных"
@@ -121,13 +120,14 @@ fun selectionClothesWeather(tempurature: Int): String {
 
             else ->{
                 println("детские")
-                println("детские")
+                println("18+")
                 println ("подростковые")}
         }
     }
 
 
-fun checkType(doc: String): String { return when (doc) {
+fun checkType(doc: String): String {
+    return when (doc) {
      ".xlsc", ".xls" -> "Таблица"
      ".gif", "bmp", "jpeg" -> "Изображение"
     "txt", " doc", "rtf" -> " Текстовый документ"
@@ -135,7 +135,6 @@ fun checkType(doc: String): String { return when (doc) {
      }
 }
 fun convertTempere (celci: Double?, farengeit: Double?) {
-
     if (farengeit == null && celci != null)
         (celci * 9.0 / 5.0) + 32.0
     else if (celci == null && farengeit != null)
