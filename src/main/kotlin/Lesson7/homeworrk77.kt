@@ -118,13 +118,13 @@ fun main () {
 //
        for (u in 1..10) {
 
-           println(w*u)
-           println("")
+           print(w*u)
+           print(" ")
 
 
           }
 
-
+println()
 
 
     }}
