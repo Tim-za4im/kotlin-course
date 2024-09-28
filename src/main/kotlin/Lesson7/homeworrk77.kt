@@ -39,116 +39,114 @@ package Lesson7
 ////Задача на вложенный цикл
 ////
 fun main () {
-//
-//    for (j in 1..5) {
-//        println(j)
-//    }
-//    for (i in 0..10 step 2) {
-//        println(i)
-//    }
-//
-//    for (k in 1..10) {
-//        if (k % 2 == 0)
-//            println(k)
-//    }
-//
-//    for (m in 5 downTo 1) {
-//        println(m)
-//    }
-//
-//
-//  for (a in 10 downTo 1 step 2) {
-//    println(a)
-// }
-//    for(t in 1..9 step 2){
-//        println(t)
-//    }
-// for (b in 1 until 20 step 3 ){
-//     println(b)
-// }
-//    for (c in 1 until 9){
-//        println(c)}
-//    for (h in 1..9) {
-//        if (h != 9) {
-//            println(h)
-//        }
-//
-//    }
-//    for (n in 3 until 15){
-//        println(n)}
-//
-//
-//   var f = 1
-//
-//   while  ( f * f++ <=5  ){
-//    println(f)
-//        }
-//
-//    var e= 10
-//    while (e >5){
-//        e--
-//        println(e)
-//
-//    }
-//
-//var y =5
-//    do {
-//        println(y)
-//        y--
-//    } while (y>=1)
-//
-//
-//    var s =5
-//    do {
-//        println(s)
-//        s++
-//    } while (s<=10)
-//
-//for (i in 1..10){
-//    if(i==6) break
-//    println(i)
-//}
-//   var u =1
-//   while (u <= 10 ) {
-//       println(u)
-//   u++}
-//
-//   }
-//var l = 1
-//    while (true){
-//        println(l)
-//   if(l == 10 ) {break
-//
-//   }
-//l++
-//}}
 
-//
-//    for (o in 1 ..10){
-//      if(o % 2 ==0) continue
-//        println(o)
-//    }
-//
-//
-//var v =1
-//while (v<=10){
-//    if(v % 3==0)
-//        println(v)
-//    v++
-//}
-//    for (w in 1..10){
-//
-//       for (u in 1..10) {
-//
-//           print( w * u )
-//           print( " " )
-//
-//
-//          }
-//
-//println()
-//
-//
+    for (a in 1..5) {
+        println(a)
+    }
+    for (b in 0..10 step 2) {
+        println(b)
+    }
+
+    for (c in 1..10) {
+        if (c % 2 == 0)
+            println(c)
+    }
+
+    for (d in 5 downTo 1) {
+        println(d)
+    }
+
+
+  for (e in 10 downTo 1 step 2) {
+    println(e)
+ }
+    for(f in 1..9 step 2){
+        println(f)
+    }
+ for (g in 1 until 20 step 3 ){
+     println(g)
+ }
+    for (h in 1 until 9){
+        println(h)}
+    for (i in 1..9) {
+        if (i != 9) {
+            println(i)
+        }
+
+    }
+    for (j in 3 until 15){
+        println(j)}
+
+
+   var m = 1
+
+   while  ( m * m++ <=5  ){
+    println(m)
+        }
+
+    var n= 10
+    while (n>5){
+        n--
+        println(n)
+
+    }
+
+var o =5
+    do {
+        println(o)
+        o--
+    } while (o>=1)
+
+
+    var p =5
+    do {
+        println(p)
+        p++
+    } while (p<=10)
+
+for (q in 1..10){
+    if(q==6) break
+    println(q)
+}
+   var r =1
+   while (r <= 10 ) {
+       println(r)
+   r++}
+
+
+var s = 1
+   while (true){
+       println(s)
+  if(s == 10 ) {break
+  }
+s++
+}
+
+
+    for (t in 1 ..10){
+      if(t % 2 ==0) continue
+        println(t)
+    }
+
+
+var v =1
+while (v<=10){
+    if(v % 3==0)
+        println(v)
+    v++
+}
+    for (w in 1..10) {
+
+        for (u in 1..10) {
+
+            print(w * u)
+            print(" ")
+
+        }
+    }
+}
+
+
 
 
 
