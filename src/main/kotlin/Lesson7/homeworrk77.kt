@@ -38,7 +38,7 @@ package Lesson7
 ////Напишите цикл while, который выводит числа от 1 до 10, но пропускает числа, кратные 3.
 ////Задача на вложенный цикл
 ////
-fun main () {}
+fun main () {
 //
 //    for (j in 1..5) {
 //        println(j)
@@ -109,10 +109,20 @@ fun main () {}
 //    println(i)
 //}
 //   var u =1
-//   while (true )
-//   if( u==10) break
-//       println(u++)
+//   while (u <= 10 ) {
+//       println(u)
+//   u++}
 //
+//   }
+//var l = 1
+//    while (true){
+//        println(l)
+//   if(l == 10 ) {break
+//
+//   }
+//l++
+//}}
+
 //
 //    for (o in 1 ..10){
 //      if(o % 2 ==0) continue
@@ -139,7 +149,7 @@ fun main () {}
 //println()
 //
 //
-  // }
+
 
 
 
