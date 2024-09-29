@@ -127,10 +127,10 @@ println("****-****-****-$convertNummbers")
     val splitWords = stringWords.split("-")
     val separWords = splitWords.joinToString(" ")
     var abbrev = ""
-    for ( letters in separWords.split(" ")) {//
+    for ( letters in separWords.split(" ")) {
         abbrev +=  letters.substring(0,1)
     }
-    println("$abbrev")
+    println(abbrev)
 }
 
 
