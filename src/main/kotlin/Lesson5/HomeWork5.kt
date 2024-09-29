@@ -1,6 +1,6 @@
 package Lesson5
 
-import com.timur.com.timur.kotlincourse.meteodata
+
 
 fun main(){
     println(soundIntensity(20.0))
