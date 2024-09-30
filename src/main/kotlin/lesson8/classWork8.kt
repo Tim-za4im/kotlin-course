@@ -19,12 +19,12 @@ package lesson8
 //val y = 20
 //val resultString = "Результат сложения x и y равен ${x + y}"
 //println(resultString)
-
+//
 //al subString = originalString.substring(7)
 //val subString2 = originalString.substring(3, 6)
 //val replacedString = originalString.replace("fun", "awesome")
 //val words = originalString.split(" ")
-
+//
 //al subString = originalString.substring(7)
 //val subString2 = originalString.substring(3, 6)
 //val replacedString = originalString.replace("fun", "awesome")
@@ -66,8 +66,8 @@ package lesson8
 //   Баланс счета: $%,.2f
 //""".trimIndent()
 //println(text.format(name, city, age, friendsCount, rating, balance))
-
-
+//
+//
 //Правила Проверки и Преобразования:
 //Если фраза начинается с "ошибка":
 //Преобразование: Замените "ошибка" на "небольшое недоразумение".
@@ -85,9 +85,7 @@ package lesson8
 //"Обнаружена проблема с сетью."
 //"Срочно нужно обновить данные!
 // "Kotlin: The Fun Way to Learn Programming"
-fun main() {
+
 //    val mumb = 123-456-789
 //    val replaced = mumb.replace{123456,'x'}
-//    println (mumb
-//    )
-}
+//    println (mumb)
