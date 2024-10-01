@@ -89,3 +89,30 @@ package lesson8
 //    val mumb = 123-456-789
 //    val replaced = mumb.replace{123456,'x'}
 //    println (mumb)
+//un multiplyTable(first: Int, second: Int) {
+//    val formatLength = (first * second).toString().length + 1
+//    print(" ".repeat(formatLength))
+//
+//    val xRange = getRange(first)
+//    val yRange = getRange(second)
+//    val formatter = "%${formatLength}s"
+//    for (i in xRange) {
+//        print(formatter.format("$i"))
+//    }
+//    println()
+//    for (i in yRange) {
+//        print(formatter.format("$i"))
+//        for (j in xRange) {
+//            print(formatter.format("${i * j}"))
+//        }
+//        println()
+//    }
+//}
+//
+//private fun getRange(size: Int): IntProgression {
+//    return when {
+//        size > 0 -> 1..size
+//        size < 0 -> -1 downTo size
+//        else -> throw IllegalArgumentException("Неверное значение size")
+//    }
+//}

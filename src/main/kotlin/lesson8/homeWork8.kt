@@ -126,11 +126,12 @@ println("****-****-****-$convertNummbers")
     val stringWords = "Объектно-ориентированное программирование"
     val splitWords = stringWords.split("-")
     val separWords = splitWords.joinToString(" ")
+    println(separWords)
     var abbrev = ""
     for ( letters in separWords.split(" ")) {
-        abbrev +=  letters.substring(0,1)
+        abbrev +=  letters.substring(0,1) //etters[0]  а делал через  letters.substring(0,1)
     }
-    println(abbrev)
+    println(abbrev.uppercase())
 }
 
 
