@@ -24,8 +24,8 @@ println(mutableList.toList())
     val joinlist = mutableListOf<Int>()
     for( i in oneList){
         joinlist.add(i)}
-    for (j in twoList){
-        joinlist.add(j)}
+    for (i in twoList){
+        joinlist.add(i)}
         println(joinlist.toList())
 
 val listNumbers = listOf(2,6,8,10,12,14)
