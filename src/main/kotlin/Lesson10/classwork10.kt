@@ -1,6 +1,6 @@
 package Lesson10
-
-fun main() {
+//
+//fun main() {
 //    val numbers = arrayOf (1,2,3,4,5)
 //    val doubles : DoubleArray= doubleArrayOf(1.1, 2.2, 3.3)
 //val emtyArray = Array(5){""}
@@ -28,12 +28,12 @@ fun main() {
 //    }
 //    val examle = Array(size = 10) { 0 }
 //    val arrayDouble = doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0)
-
-    val array = arrayOf(1, 2, 3)
-    val barray = arrayOf(4, 5, 6)
-    val emtyArray = Array(size = 3) {0}
-    for (i in emtyArray.indices){
-        emtyArray[i] = array[i] + barray [i]
-    }
-    println(emtyArray.toList())
-}
+//
+//    val array = arrayOf(1, 2, 3)
+//    val barray = arrayOf(4, 5, 6)
+//    val emtyArray = Array(size = 3) {0}
+//    for (i in emtyArray.indices){
+//        emtyArray[i] = array[i] + barray [i]
+//    }
+//    println(emtyArray.toList())
+//}
