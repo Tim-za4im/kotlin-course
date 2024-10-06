@@ -20,16 +20,37 @@ fun main (){
 //    val findString="Kotlin"
 //    println(containSet(funSet,findString))
 
-val oneSet= setOf(1,2,3)
-    val twoSet = setOf(4,5,6)
-    val joinSet = mutableSetOf<Int>()
-    for (i in oneSet){
-        joinSet.add(i)
+//val oneSet= setOf(1,2,3)
+//    val twoSet = setOf(4,5,6)
+//    val joinSet = mutableSetOf<Int>()
+//    for (i in oneSet){
+//        joinSet.add(i)
+//    }
+//    for (i in twoSet){
+//        joinSet.add(i)
+//    }
+//println(joinSet.toList())
+
+
+//    val setfist = setOf(1,2,3,4,5,6)
+//    val setscond = setOf(6,7,8,9,10,11)
+//    val intersectionsSet = mutableSetOf<Int>()
+//    for (i in setfist){
+//        for(j in setscond){
+//            if (i==j){
+//                intersectionsSet.add(i)
+//            }
+//        }
+//    }
+//println(" Нашли Пересечения Множеств :$intersectionsSet")
+
+//11 Задание
+    val setString = setOf("hello", "world" , "Kotlin ", "java", "swif")
+     val setInList = mutableListOf<String>()
+    for (i in setString){
+        setInList.add(i)
     }
-    for (i in twoSet){
-        joinSet.add(i)
-    }
-println(joinSet.toList())
+    println(setInList)
 
 }
 fun containSet (set: Set<String>, findString: String):Boolean{
