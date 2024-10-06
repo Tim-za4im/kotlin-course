@@ -2,58 +2,73 @@ package Lesson10
 
 fun main (){
 
-    val emtySet = setOf<Int>()
-
-    val setNumbers = setOf(1, 2, 3)
-
-
-    val mutableSet = mutableSetOf("Kotlin", " Java", "Scala")
-    mutableSet.add("Swift")
-    mutableSet.add("Go")
-    val setNumber2 = mutableSetOf(5, 6, 8)
-    setNumber2.add(2)
-    val numbersSet3 = setOf(1, 2, 3, 4, 5)
-    for (i in numbersSet3) {
-        println(i)
-    }
-    val funSet = setOf("Hello", "World", "Kotlin")
-    val findString = "Kotlin"
-    println(containSet(funSet, findString))
-
-    val oneSet = setOf(1, 2, 3)
-    val twoSet = setOf(4, 5, 6)
-    val joinSet = mutableSetOf<Int>()
-    for (i in oneSet) {
-        joinSet.add(i)
-    }
-    for (i in twoSet) {
-        joinSet.add(i)
-    }
-    println(joinSet.toList())
-
-
-    val setfist = setOf(1, 2, 3, 4, 5, 6)
-    val setscond = setOf(6, 7, 8, 9, 10, 11)
-    val intersectionsSet = mutableSetOf<Int>()
-    for (i in setfist) {
-        for (j in setscond) {
-            if (i == j) {
-                intersectionsSet.add(i)
+//    val emtySet = setOf<Int>()
+//
+//    val setNumbers = setOf(1, 2, 3)
+//
+//
+//    val mutableSet = mutableSetOf("Kotlin", " Java", "Scala")
+//    mutableSet.add("Swift")
+//    mutableSet.add("Go")
+//    val setNumber2 = mutableSetOf(5, 6, 8)
+//    setNumber2.add(2)
+//    val numbersSet3 = setOf(1, 2, 3, 4, 5)
+//    for (i in numbersSet3) {
+//        println(i)
+//    }
+//    val funSet = setOf("Hello", "World", "Kotlin")
+//    val findString = "Kotlin"
+//    println(containSet(funSet, findString))
+//
+//    val oneSet = setOf(1, 2, 3)
+//    val twoSet = setOf(4, 5, 6)
+//    val joinSet = mutableSetOf<Int>()
+//    for (i in oneSet) {
+//        joinSet.add(i)
+//    }
+//    for (i in twoSet) {
+//        joinSet.add(i)
+//    }
+//    println(joinSet.toList())
+//
+//
+//    val setFist = setOf(1, 2, 3, 4, 5, 6,9,10)
+//    val setSecond = setOf(3,4,6, 7, 8, 9, 10, 11)
+//    val intersectionsSet = mutableSetOf<Int>()
+//    for (i in setFist) {
+//        for (j in setSecond) {
+//            if (i == j) {
+//                intersectionsSet.add(i)
+//            }
+//        }
+//    }
+//println(" Нашли Пересечения Множеств :$intersectionsSet")
+//
+////11 Задание
+//    val setString = setOf("hello", "world" , "Kotlin ", "java", "swif")
+//     val setInList = mutableListOf<String>()
+//    for (i in setString){
+//        setInList.add(i)
+//    }
+//    println(setInList)
+//
+// Задание 10
+    val setFistA = setOf(1, 2, 3, 4, 5, 6,9,10)
+    val setSecondB = setOf(3,4,6, 7, 8, 9, 10, 11)
+val differenceSet = mutableSetOf<Int>()
+    for (i in setFistA){
+        var flag = false
+        for (j in setSecondB){
+            if ( i == j ){
+                flag=true
+                break
             }
         }
+        if (!flag){
+            differenceSet.add(i)
+        }
     }
-println(" Нашли Пересечения Множеств :$intersectionsSet")
-
-//11 Задание
-    val setString = setOf("hello", "world" , "Kotlin ", "java", "swif")
-     val setInList = mutableListOf<String>()
-    for (i in setString){
-        setInList.add(i)
-    }
-    println(setInList)
-
-
-
+println("Разность в сетах : $differenceSet")
 }
 fun containSet (set: Set<String>, findString: String):Boolean{
     for (i in set){
