@@ -2,47 +2,47 @@ package Lesson10
 
 fun main (){
 
-//val emtySet= setOf<Int>()
-//
-//val setNumbers = setOf(1,2,3)
-//
-//
-//val mutableSet = mutableSetOf("Kotlin", " Java", "Scala" )
-//    mutableSet.add("Swift")
-//    mutableSet.add("Go")
-//     val setNumber2 = mutableSetOf(5,6,8)
-//    setNumber2.add(2)
-//val numbersSet3 = setOf(1,2,3,4,5)
-//    for(i in numbersSet3){
-//        println(i)
-//    }
-//val funSet = setOf("Hello", "World" ,"Kotlin" )
-//    val findString="Kotlin"
-//    println(containSet(funSet,findString))
+    val emtySet = setOf<Int>()
 
-//val oneSet= setOf(1,2,3)
-//    val twoSet = setOf(4,5,6)
-//    val joinSet = mutableSetOf<Int>()
-//    for (i in oneSet){
-//        joinSet.add(i)
-//    }
-//    for (i in twoSet){
-//        joinSet.add(i)
-//    }
-//println(joinSet.toList())
+    val setNumbers = setOf(1, 2, 3)
 
 
-//    val setfist = setOf(1,2,3,4,5,6)
-//    val setscond = setOf(6,7,8,9,10,11)
-//    val intersectionsSet = mutableSetOf<Int>()
-//    for (i in setfist){
-//        for(j in setscond){
-//            if (i==j){
-//                intersectionsSet.add(i)
-//            }
-//        }
-//    }
-//println(" Нашли Пересечения Множеств :$intersectionsSet")
+    val mutableSet = mutableSetOf("Kotlin", " Java", "Scala")
+    mutableSet.add("Swift")
+    mutableSet.add("Go")
+    val setNumber2 = mutableSetOf(5, 6, 8)
+    setNumber2.add(2)
+    val numbersSet3 = setOf(1, 2, 3, 4, 5)
+    for (i in numbersSet3) {
+        println(i)
+    }
+    val funSet = setOf("Hello", "World", "Kotlin")
+    val findString = "Kotlin"
+    println(containSet(funSet, findString))
+
+    val oneSet = setOf(1, 2, 3)
+    val twoSet = setOf(4, 5, 6)
+    val joinSet = mutableSetOf<Int>()
+    for (i in oneSet) {
+        joinSet.add(i)
+    }
+    for (i in twoSet) {
+        joinSet.add(i)
+    }
+    println(joinSet.toList())
+
+
+    val setfist = setOf(1, 2, 3, 4, 5, 6)
+    val setscond = setOf(6, 7, 8, 9, 10, 11)
+    val intersectionsSet = mutableSetOf<Int>()
+    for (i in setfist) {
+        for (j in setscond) {
+            if (i == j) {
+                intersectionsSet.add(i)
+            }
+        }
+    }
+println(" Нашли Пересечения Множеств :$intersectionsSet")
 
 //11 Задание
     val setString = setOf("hello", "world" , "Kotlin ", "java", "swif")
@@ -51,6 +51,8 @@ fun main (){
         setInList.add(i)
     }
     println(setInList)
+
+
 
 }
 fun containSet (set: Set<String>, findString: String):Boolean{
