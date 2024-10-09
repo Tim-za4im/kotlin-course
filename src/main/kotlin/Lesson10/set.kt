@@ -12,6 +12,10 @@ fun main (){
     mutableSet.add("Go")
     val setNumber2 = mutableSetOf(5, 6, 8)
     setNumber2.add(2)
+    val setInt = mutableSetOf(1, 2, 3, 4, 5)
+    setInt.remove( 2)
+
+
     val numbersSet3 = setOf(1, 2, 3, 4, 5)
     for (i in numbersSet3) {
         println(i)

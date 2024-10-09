@@ -1507,3 +1507,14 @@ for различия:
 - **do-while** — когда нужно гарантировать хотя бы одну итерацию, например, при запросе ввода от пользователя до тех пор, пока не введено корректное значение.
 
  */
+//fun findIndexOfFive(arr: IntArray): Int {
+//    for (i in arr.indices) {
+//        if (arr[i] == 5) return i
+//    }
+//    return -1 // Если элемент не найден, возвращаем -1
+//}
+//
+//// Использование функции
+//val array8 = intArrayOf(2, 4, 5, 6, 8)
+//val index = findIndexOfFive(array8)
+//println(index)
