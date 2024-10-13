@@ -1,6 +1,7 @@
 package lesson12
 
 import java.awt.Image
+import java.lang.Error
 
 /*Напишите сигнатуру функции, котораянепринимаетаргментовиневозвращаетзначния.1
 Напишите сигнатуру функции, котораяпринимает два целых числа и возвращает их сумму.2
@@ -15,8 +16,10 @@ import java.awt.Image
 
 
 */
-fun mai(){
+fun main(){
 
+    findFirstNegative(listOf( -1, 2, 5, 6, 4,))
+    drawRectangle(10,5)
 
 }
 
@@ -103,21 +106,77 @@ fun printNumbersUntil ( n : Int){
     for (i in 1..n)
         println(i)
 }
-fun findFirstNegative (intList :List<Int>) : Int?{
-   for (number in intList){
-       if (number<0){
-           break}}
-    return null}
-
+fun findFirstNegative (intList :List<Int>) : Int? {
+    for (number in intList) {
+        if (number < 0){
+            return number
+        }
+    }
+    return null
+}
 fun  processList( stringList : List<String>) {
             for (nullString3 in stringList) {
                 if (nullString3 == null){
                 return
             }
+                println(nullString3)
         }
-
-        println()
     }
+
+private  fun checkvalue ( wh : Int, error: String){
+    if (wh<=0)throw IllegalArgumentException( "$error должно быть положительным и больше нуля")
+}
+fun drawRectangle(width: Int, height: Int) {
+    checkvalue(width,"width")
+    checkvalue(height,"height")
+
+    fun createLine(start: Char, middle: Char, end: Char, count: Int): String {
+        var line = "$start"
+        for (i in 1 until count - 1) {
+            line += middle
+        }
+        line += end
+        return line
+    }
+    val topBottomLine = createLine('+', '-', '+', width)
+    println(topBottomLine)
+
+    for (i in 1 until height - 1) {
+        println(createLine('|', ' ', '|', width))
+    }
+
+    println(topBottomLine)
+}
+//fun drawRectangle(width: Int, height: Int) {
+//    if (width <= 0) throw IllegalArgumentException("width должно быть положительным и больше нуля")
+//    if (height <= 0) throw IllegalArgumentException("height должно быть положительным и больше нуля")
+//
+//    // Верхняя граница
+//    var topLine = "+"
+//    for (i in 1 until width - 1) {
+//        topLine += "-"
+//    }
+//    topLine += "+\n"
+//    print(topLine)
+//
+//    // Боковые границы
+//    for (i in 1 until height - 1) {
+//        var middleLine = "|"
+//        for (j in 1 until width - 1) {
+//            middleLine += " "
+//        }
+//        middleLine += "|\n"
+//        print(middleLine)
+//    }
+//
+//    // Нижняя граница
+//    var bottomLine = "+"
+//    for (i in 1 until width - 1) {
+//        bottomLine += "-"
+//    }
+//    bottomLine += "+\n"
+//    print(bottomLine)
+//}
 
 
 //Задача 5:
@@ -127,3 +186,5 @@ fun  processList( stringList : List<String>) {
 //Сделай рефакторинг функции, через определение вспомогательных приватных функций. Требуется избавиться от дублирования кода и трудно воспринимаемых фрагментов.
 //
 //Сначала сделай запуск функции и посмотри на результат её работы. Сделай запуск после рефакторинга и проверь, чтобы результат работы был аналогичным.
+//fun illeglArgumentException(s: String): Throwable {
+//    return TODO("Provide the return value")
