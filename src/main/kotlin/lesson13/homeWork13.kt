@@ -1,5 +1,7 @@
 package lesson13
 
+import kotlin.Double as Double1
+
 
 /*Задачи на приведение коллекций к значению
 isNotEmpty
@@ -130,32 +132,244 @@ fun main() {
     //Проверить, что размер коллекции больше 5 элементов.
 
     val k = listOf(1, 5, 9, 7, 8, 2, 3)
-    if (k.size >10){
-    println(" k > 5")}
-
-        else  println(" no")
-     if(k.isEmpty()){
-         println("Пустая")}
-    else  println(" НЕ пустая")
-println(k.sum())//Посчитать сумму всех значений
-println(k.average())}//Посчитать среднее
-
+    if (k.size > 10) {
+        println(" k > 5")
+    } else println(" no")
+    if (k.isEmpty()) {
+        println("Пустая")
+    } else println(" НЕ пустая")
+    println(k.sum())//Посчитать сумму всех значений
+    println(k.average())//Посчитать среднее
 
 
+    val indexList = listOf(2, 4, 8, 9, 7, 5)
+    val element = indexList.getOrElse(6) { 54 }
+    println(element) //Взять элемент по индексу или создать значение если индекса не существует
 
-
-
-
-
-
-
-//Проверить, что коллекция пустая
-//Проверить, что коллекция не пустая
-//Взять элемент по индексу или создать значение если индекса не существует
 //Собрать коллекцию в строку
-//Посчитать сумму всех значений
+    val stringList = indexList.joinToString(" --")
+    println(stringList)
+
+
 //Посчитать среднее
-//Взять максимальное число
+
+    val average = indexList.average()
+    println("$%6.2f".format(average))
+
+    //Взять максимальное число
+
+
+    val maxlist = indexList.maxOrNull()
+    println(maxlist)
+
+
 //Взять минимальное число
+
+    val minList = indexList.minOrNull()
+    println(minList)
+
 //Взять первое число или null
+
+    val fistNull = indexList.firstOrNull()
+    println(fistNull)
+
+
 //Проверить что коллекция содержит элемент
+
+    if (indexList.contains(5))
+        println("Есть 5")
+    else
+        println(" Нуту 5")
+//    Отфильтровать коллекцию по диапазону 18-30
+
+    val listExample2 = listOf(2, 8, 9, 11, 20, 25, 28, 30)
+    val listfiltr = listExample2.filter { it in 18..30 }
+    println(listfiltr)
+//    Выбрать числа, которые не делятся на 2 и 3 одновременно
+    val notFilter = listExample2.filterNot {
+        (it % 2 == 0 || it % 3 == 0)
+    }
+    println(notFilter)
+
+
+//    Очистить текстовую коллекцию от null элементов
+
+val listNull = listOf(" yes " , null , " kolin ",null, "world", null, "word")
+    val nullOff = listNull.filterNotNull()
+    println(nullOff)
+
+//            Преобразовать текстовую коллекцию в коллекцию длин слов
+
+val stringList2 = listOf("Word","map", "size", "Filter","map")
+    val lenghtMap = stringList2.map { it.length}
+    println(lenghtMap)
+
+//   Преобразовать текстовую коллекцию в мапу, где ключи - слова, а значения - перевёрнутые слова
+    val reversedMap = stringList2.associate { it to it.reversed() }
+    println(reversedMap)
+
+//    Отсортировать список в алфавитном порядке
+    val sortList = stringList2.sorted()
+    println("Порядок : $sortList")
+
+//    Отсортировать список по убыванию
+    val lowList = stringList2.sortedDescending()
+    println(lowList)
+//            Распечатать квадраты элементов списка
+    val quadroList = listExample2.forEach { println( it * it) }
+    println(quadroList)
+     //  q     Группировать список по первой букве слов
+    val groupBy = stringList2.groupBy { it.first() }
+    println(groupBy)
+
+
+
+//            Очистить список от дублей
+    val distinctList = stringList2.distinct()
+    println(distinctList)
+//            Взять первые 3 элемента списка
+    val first3 = stringList2.take(3)
+    println(first3)
+
+//    Взять последние 3 элемента списка
+
+
+    val last3 = stringList2.takeLast(3)
+    println(last3)
+
+
+    //Task2
+
+    val  empty2 = listOf<Int>()
+
+    println(checkMetod(empty2))
+
+    val short2 =listOf<Int>(1, 2, 3)
+
+    println(checkMetod (short2))
+
+    val start= listOf<Int>(0, 1, 2, 3, 4, 5)
+    println(checkMetod(start))
+
+    val masive =listOf<Int>(10, 100, 1000, 10000, 10000)
+    println(checkMetod(masive))
+
+    val balance = listOf(10, 10, 10,10,10,10)
+    println(checkMetod(balance))
+
+
+    val sticky =List(20){1}
+    println(checkMetod(sticky))
+
+    val negative =listOf<Int>(-100, -99, -10, -50, -60)
+    println(checkMetod(negative))
+
+
+    val positive = listOf(1001, 1002, 1003, 1024, 1016)
+    println(checkMetod(positive))
+
+    val pussy =listOf<Int>(1, 2, 3, 10, 14)
+    println(checkMetod (pussy))
+    val uniql = listOf<Int>(1, 1, 1, 1, 1)
+    println(checkMetod(uniql))
+
+
+    val grades = listOf(85, 58, 90, 74, 88, 67, 95, 92, 50, 42, 12)
+println(
+    grades.filter { it>= 60 }
+        .sorted().
+        take(3)
+)
+
+    val list = listOf(
+        "Стол", "табурет", "ваза", "Кружка", "Зеркало", "ковер", "Шкаф", "часы", "Люстра", "подушка", "Картина", "столик", "Вазон", "шторы", "Пуф", "книга", "Фоторамка",
+        "светильник", "Коврик", "вешалка", "Подставка", "телевизор", "Комод", "полка", "Абажур", "диван", "Кресло", "занавеска", "Бра", "пепельница", "Глобус", "статуэтка",
+        "Поднос", "фигурка", "Ключница", "плед", "Тумба", "игрушка", "Настенные часы", "подсвечник", "Журнальный столик", "сувенир", "Корзина для белья", "посуда",
+        "Настольная лампа", "торшер", "Этажерка"
+    )
+    println(list.map{it.lowercase()}
+        .groupBy { it[0] }
+    )
+
+    println("Подсчет средней длины : %.2f" .format(
+        (list.map { it.length })
+        .average()
+    )
+    )
+
+    val numbersTask6 = listOf(1, 3, 5, 7, 3, 1, 8, 9, 9, 7)
+    println(numbersTask6.distinct()
+        .sortedDescending()
+        .groupBy { if(it % 2 ==0) "Чётные"
+        else "Нечётные"})
+
+
+    val agesTask7 = listOf(22, 18, 30, 45, 17, null, 60)
+    println(agesTask7.filterNotNull()
+        .firstOrNull { it > 18 }
+        ?.toString()?:"Подходящий возраст не найден")
+
+
+}
+fun checkMetod (listTask2 : List<Int>):String{
+    return when {
+        listTask2.isEmpty() -> "Пусто"
+        listTask2.size <5 -> "Короткая"
+        listTask2.getOrNull(0)==0->"Стартовая"
+        listTask2.sum()> 10000 -> "Массивная"
+        listTask2.average() == 10.0 -> "Сбалансированная"
+        listTask2.joinToString ("").length==20->"Клейкая"
+        listTask2.min()  < -10 -> " Отрицательная"
+        listTask2.max()  > 1000 -> "Положительная"
+        listTask2.contains(3) && listTask2.contains (14) -> "Пи***тая"
+else -> "Уникальная"
+
+
+
+    }
+}
+/*Задание 2: Характеристика числовой коллекции
+Написа ть метод, который принимает коллекцию чисел и возвращает строку с текущим состоянием коллекции используя конструкцию when
+Если коллекция пустая - “Пусто”
+Если количество элементов меньше пяти - “Короткая”
+Если коллекция начинается с 0 - “Стартовая”
+Если сумма всех чисел больше 10000 - “Массивная”
+Если среднее значение равно 10 - “Сбалансированная”
+Если длина строки образованная склеиванием коллекции в строку равна 20 - “Клейкая”
+Если максимальное число меньше -10 - “Отрицательная”
+Если минимальное число больше 1000 - “Положительная”
+Если содержит одновременно числа 3 и 14 - “Пи***тая”
+Иначе - “Уникальная”
+
+Вызвать метод с данными, подходящими под каждую из веток
+
+Задание 3: Анализ Учебных Оценок
+Начальные значения: val grades = listOf(85, 58, 90, 74, 88, 67, 95, 92, 50, 42, 12)
+Цель: Отфильтровать удовлетворительные оценки (>=60), отсортировать оставшиеся по возрастанию и взять первые 3.
+
+Задание 4: Создание каталога по первой букве.
+Начальные значения: val list = listOf(
+    "Стол", "табурет", "ваза", "Кружка", "Зеркало", "ковер", "Шкаф", "часы", "Люстра", "подушка", "Картина", "столик", "Вазон", "шторы", "Пуф", "книга", "Фоторамка",
+     "светильник", "Коврик", "вешалка", "Подставка", "телевизор", "Комод", "полка", "Абажур", "диван", "Кресло", "занавеска", "Бра", "пепельница", "Глобус", "статуэтка",
+      "Поднос", "фигурка", "Ключница", "плед", "Тумба", "игрушка", "Настенные часы", "подсвечник", "Журнальный столик", "сувенир", "Корзина для белья", "посуда",
+      "Настольная лампа", "торшер", "Этажерка"
+)
+Цель: Привести все слова в списке к нижнему регистру, сгруппировать в каталог по первой букве.
+
+Задание 5: Подсчёт средней длины слов в списке.
+Начальные значения из задачи 3.
+Цель: Перевести все слова в количество букв, подсчитать среднее значение. Вывести форматированный текст с двумя знаками после запятой.
+
+Задание 6: Категоризация чисел.
+Начальные значения: val numbers = listOf(1, 3, 5, 7, 3, 1, 8, 9, 9, 7)
+Цель: Отобрать уникальные числа, отсортировать по убыванию и сгруппировать по четности (“четные” и “нечетные”).
+
+Задание 7: Поиск первого подходящего элемента
+Начальные значения: val ages = listOf(22, 18, 30, 45, 17, null, 60)
+Цель: Найти первый возраст в списке, который соответствует условию (больше 18), преобразовать его к строке,
+ или вернуть сообщение "Подходящий возраст не найден".
+*/
+
+
+
+
