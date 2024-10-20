@@ -270,9 +270,11 @@ val mutableMapId = mutableMapOf(
    "T4" to 40,
   "T5" to 50)
 
-//val changeID = mutableMapId.mapKeys
-
-
+val changeID = mutableMapId.mapKeys{ getNameById(it.key) }
+println(" Преобразование словаря : ")
+changeID.forEach{(nameTest, time) ->
+    println("$nameTest: $time")
+}
     //Для словаря с оценками производительности различных версий приложения увеличьте каждую оценку на 10%, чтобы учесть новые условия тестирования.
 
     val map10 = mapOf(
@@ -348,30 +350,18 @@ val mutableMapId = mutableMapOf(
 println(filterMapA)
 
 }
-
 fun statusEndpoint (endpoint : String, apiTest: Map<String, String>): String{
     return apiTest[endpoint]?:"Endpoint $endpoint не был протестирован"
 }
-
-fun  getNameById(id: String) {
-     when (id){
-    "T1" -> "Fix"
-    "T2" -> "Skipped"
-    "T3" -> "Unfix"
-    "T4" -> "Passed"
-    "T5" -> "Fail"
-    else -> "Error Test"
-
-}}
+fun getNameById(id: String): String {
+    return "Test $id"//Фейковая функция, возвращающая название теста
+}
 
 
-/*
-
-Преобразуйте словарь, содержащий ID теста и данные о времени выполнения тестов, заменив идентификаторы тестов на их названия
-(название можно получить вызвав фейковый метод, например getNameById(id: String))
 
 
-*/
+
+
 
 
 
