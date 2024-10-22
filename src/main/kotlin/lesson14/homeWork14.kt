@@ -72,7 +72,7 @@ fun main () {
 
     val mapService = mapOf("МакДак" to 50, "KFC" to 45, "Шаверма " to 30)
     val specifiedThreshold = 35
-    println(mapService.filterValues { it > specifiedThreshold })
+    println(mapService.filterValues { it > specifiedThreshold})
     println(mapService.filterValues { it > 30 })
 
 //В словаре хранятся результаты тестирования API (ключ — endpoint, значение — статус ответа в строке).
@@ -84,7 +84,7 @@ fun main () {
         "EndpointD" to "Error"
     )
 
-    val status = mapTestApi["EndpointF"] ?: "Endpoint не был протестирован"
+    val status = mapTestApi["EndpointF"] ?:  "Endpoint не был протестирован"
     println("Cтатус для ответа  EndpointF: $status")
     val EndpointW = statusEndpoint("EndpointW", mapTestApi)
     println("Cтатус  ответа EndpointW $EndpointW")
@@ -345,8 +345,8 @@ changeID.forEach{(nameTest, time) ->
         "TestFirst" to true,
         "Test optional" to false
     )
-    val filterMapA = optionalMapFilter.filter { it.value == false && it.key.contains("optional") }
-
+    val filterMapA = optionalMapFilter.filterValues { it == false }
+    optionalMapFilter.filterKeys {  it.contains("optional") }
 println(filterMapA)
 
 }
