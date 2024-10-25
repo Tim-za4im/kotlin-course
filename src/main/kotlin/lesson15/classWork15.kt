@@ -51,13 +51,21 @@ val person2=person2 ("John" , 30)
 
     val resukt = ocompObject2.add(5 , 2)
 
-    ocompObject2.version2
+    ocompObject2.version2}
 //data class User(val id: Int, val name: String)
 
 //var lamp1 = Lamp ( isOn : true)
        // lamp.switch
 
-
-
-
-}
+///*fun advancedRemoveShelf(index: Int): List<String> {
+//    val unallocatedItems = mutableListOf<String>()
+//    if (index >= shelves.size) return unallocatedItems
+//    val removedShelf = shelves.removeAt(index)
+//    for (item in removedShelf.getItems().sortedByDescending { it.length }) {
+//        if (addItem(item)) continue
+//        unallocatedItems.add(item)
+//    }
+//    return unallocatedItems
+//}
+//
+//
