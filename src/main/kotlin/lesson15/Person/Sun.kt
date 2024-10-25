@@ -1,4 +1,6 @@
 package lesson15.Person
 
-class Sun {
+object Sun {
+
+    val mass = 100
 }

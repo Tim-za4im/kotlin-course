@@ -1,5 +1,8 @@
 package lesson15
 
+import lesson15.Person.ocompObject2
+import lesson15.Person.person2
+
 class pesron (
     val name : String,
     val age : Int
@@ -29,7 +32,7 @@ class Calculator {
 fun main() {
     val result = Calculator.add(5, 3)
     println("Result: $result")
-}
+
 //*fun main() {
 //    val person = Person("John", 30)
 //    person.sayHello()
@@ -38,11 +41,23 @@ fun main() {
 //
 //    // Метод класса
 //    fun sayHello() {
-//        println("Hello, my name is $name and I am $age years old.")
+//        println("Hello, my name is $name ad I am $age years old.")
 //    }
 //}*/
+val person2=person2 ("John" , 30)
+    person2.sayhello2()
 
-data class User(val id: Int, val name: String)
+    //Logger.log( " Matrix")
 
-var lamp1 = Lamp ( isOn : true)
-        lamp.switch
+    val resukt = ocompObject2.add(5 , 2)
+
+    ocompObject2.version2
+//data class User(val id: Int, val name: String)
+
+//var lamp1 = Lamp ( isOn : true)
+       // lamp.switch
+
+
+
+
+}
