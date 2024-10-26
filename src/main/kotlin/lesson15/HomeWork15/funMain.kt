@@ -2,8 +2,11 @@ package lesson15.HomeWork15
 
 fun main() {
 
-
-
+Moon2.showPhase(
+    15
+)
+val showUfa = Concert("Оркестр народный", "Уфа-арена", 100,10)
+showUfa.ticketSale()
 }
 /*Событие: Вечеринка Создайте класс Party, который описывает вечеринку.
  У него должны быть свойства location (String) и attendees (Int). Добавьте метод details(),
