@@ -65,11 +65,9 @@ open class Pair:Materials(){
         val presentMaterials = extractMaterial().toMutableList()
         pair.forEach { (key, value) ->
             presentMaterials.add(0, key)
-            }
+            presentMaterials.add(value) }
             presentMaterials.forEach { addMaterial(it) }
-    pair.forEach { ( value) ->
-        addMaterial(value)
-    }
+
 }
 }
 
