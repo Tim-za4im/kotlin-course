@@ -17,7 +17,12 @@ abstract class BaseClass(
            }
        }
    protected var protectedField = "измени меня из функции main() через сеттер в наследнике"
+
    private var privateField = "добавь сеттер чтобы изменить меня из main()"
+
+    fun changeProtectedField(value: String) {
+        privateField = value
+    }
 
    fun getAll(): String {
        return mapOf(

@@ -6,15 +6,15 @@ class ChildrenClass(
     publicVal: String
 ) : BaseClass(privateVal, protectedVal, publicVal) {
 
-    override fun verifyPublicField(value: String): Boolean {
+    override fun verifyPublicField (value: String) : Boolean{
         return true
     }
-
-    fun changeProtectedField(value: String) {
+    fun changePrivateField(value: String) {
         protectedField = value
     }
 
 
+    }
     // объясни, почему в main() доступна функция getAll() хотя её здесь нет : от класса Base наследована
 
     // проверь, что выводится на печать при вызове функции printText()
@@ -23,7 +23,6 @@ class ChildrenClass(
     private fun privatePrint() {
         println("Печать из класса ChildrenClass")
     }
-}
 
 fun main () {
 
