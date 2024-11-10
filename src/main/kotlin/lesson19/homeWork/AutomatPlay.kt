@@ -25,25 +25,27 @@ package lesson19.homeWork
 выплатить выигрыш*/
 class AutomatPlay (
     val color: String,
-    var model :String,
-    var automatIsOn: Boolean =false,
-    var  osLoad : Boolean=false,
+    val model :String,
+   private var automatIsOn: Boolean =false,
+    private var  osLoad : Boolean=false,
     private val gameList : List<String>,
-    var joystick : Boolean,
+    val joystick : Boolean,
     private var balanceMoney: Int,
-    val masterAutomatPlay: String,
-    val supportNumber : String,
+    var masterAutomatPlay: String,
+    private var  supportNumber : String,
     )
 
 
 {
     fun onAutomat (){
         automatIsOn=true
+        loadingOS()
     }
 
 
 
     fun offAutomat (){
+        offOS ()
         automatIsOn=false
     }
 
@@ -64,7 +66,7 @@ class AutomatPlay (
     }
 
 
-//
+
 
     fun startGame (game:String){
     return if (gameList.contains(game)) {
@@ -73,7 +75,7 @@ class AutomatPlay (
         { println("No game")
   }}
 
-private fun paySession(pay: Int) {
+ fun paySession(pay: Int) {
     if (pay > 0) {
         balanceMoney += pay
     } else {
@@ -82,14 +84,10 @@ private fun paySession(pay: Int) {
     }
 }
 
-    private fun openSafe(money:Int){
-        if (money<=balanceMoney){
-            balanceMoney-=money
-        }
-        else println("no")
-    }
+    fun openSafe(money:Int){}
 
-    fun payWins (money: Int){
+
+    protected fun payWins (money: Int){
         openSafe(money)
     }
 }

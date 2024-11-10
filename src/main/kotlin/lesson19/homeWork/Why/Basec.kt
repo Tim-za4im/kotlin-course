@@ -36,7 +36,7 @@ abstract class BaseClass(
    }
 
    // объясни, почему эта функция не может быть публичной
-   protected open fun getProtectedClass() = ProtectedClass() //  модификатор доступа protected class ProtectedClass только внутри класса
+   protected open fun getProtectedClass() = ProtectedClass() //  модификатор доступа protected идет от  protected class ProtectedClass, тот уже
 
    protected open fun verifyPublicField(value: String): Boolean {
        return value.length < 3
@@ -46,7 +46,7 @@ abstract class BaseClass(
        println("Печать из класса BaseClass")
    }
 
-   // объясни, почему эта функция не может быть публичной или protected
+   // объясни, почему эта функция не может быть публичной или protected : модификатор   private делает ее доступной только для внутри класса  BaseClass
    private fun getPrivateClass() = PrivateClass()// модификатор доступа у  PrivateClass написан  private class
 
    protected class ProtectedClass
