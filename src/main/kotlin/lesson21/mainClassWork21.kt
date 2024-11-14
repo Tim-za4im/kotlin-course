@@ -6,7 +6,7 @@ class BoxAny(private val item: Any) {
     }
 }
 
-class Box<T>(val item: T) {
+class Box<T>(private val item: T) {
 
     fun getItem(): T {
 

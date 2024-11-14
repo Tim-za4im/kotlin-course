@@ -38,3 +38,80 @@ package lesson21.HomeWork21
 что ни один элемент списка не является null
 Ни один элемент приведённый к типу Double не равен 0.0
 */
+
+
+fun <K, V> toMap(keys: List<K>, values: List<V>): Map<K, V> {
+    val map = mutableMapOf<K, V>()
+
+
+    val size = when {
+        keys.size <= values.size -> keys.size
+        else -> values.size
+    }
+
+    for (i in 0 until size) {
+        map[keys[i]] = values[i]
+    }
+
+    return map.toMap()
+}
+/*Напишите функцию getMiddleElement<T>(list: List<T>): T?,
+которая будет возвращать средний элемент списка, если он существует.*/
+
+fun <T>getMiddleElement(list: List<T>): T? {
+    val middleElement:Int = list.size / 2
+    return when {
+        list.isNotEmpty() -> list[middleElement]
+        else -> null
+
+    }
+
+}
+fun main() {
+
+    val list1 = listOf(1, 2, 3)
+    val middleEven = getMiddleElement(list1)
+    println(middleEven)
+
+    val emptyList = emptyList<Int>()
+    val middleEmpty = getMiddleElement(emptyList)
+    println(middleEmpty)
+
+
+
+
+    println("\n******************StringValidator*************\n")
+        val stringValid = StringValidator()
+        val oddValid = OddValidator()
+
+        val validString = "Hello"
+        val emtyString2= ""
+        println(stringValid.boolean(validString))
+        println(stringValid.boolean(emtyString2))
+
+
+        val numberA = 6
+        val numberB = 7
+        println(oddValid.boolean(numberA))
+        println(oddValid.boolean(numberB))
+
+
+
+    println("\n*******Listvalid********\n")
+    val validList = ListValidator<Int>()
+
+    val  validList2 = listOf(1,2,3)
+    val  validList0 = listOf(0,1,2)
+    val validListNull = listOf(null,0,1)
+
+    println(validList.boolean(validList2))
+    println(validList.boolean(validList0))
+    println(validList.boolean(validListNull))
+
+    }
+
+
+
+
+
+
