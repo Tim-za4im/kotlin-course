@@ -80,7 +80,7 @@ fun main() {
 
 
 
-    println("\n******************StringValidator*************\n")
+    println("\n*****************StringValidator*************\n")
         val stringValid = StringValidator()
         val oddValid = OddValidator()
 
