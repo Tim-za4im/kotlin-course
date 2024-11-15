@@ -4,7 +4,6 @@ interface Mapper<T,R>
 {
     fun map (change :T):R
 
-
     fun map2TinR (changes: List<T>):List<R>
 }
 
