@@ -1,5 +1,5 @@
 package lesson21.HomeWork21.ListHolder
-//Напишите функцию getMiddleElement<T>(list: List<T>): T?, которая будет возвращать средний элемент списка, если он существует.
+//Напишите функцию getMiddleElement<T>(list: List<T>): T?, которая будет возвращать средний элемент списка, если он существует
 class ListHolder<T>() {
     private val elements: MutableList<T> = mutableListOf()
     fun add(element : T){

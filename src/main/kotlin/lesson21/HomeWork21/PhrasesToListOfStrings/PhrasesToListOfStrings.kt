@@ -2,7 +2,7 @@ package lesson21.HomeWork21.PhrasesToListOfStrings
 
 import lesson21.HomeWork21.Mapper
 
-/*Создай класс PhrasesToListOfStrings и имплементируй интефрейс Mapper с типами String и List<String>.
+/*Создай класс PhrasesToListOfStrings и имплементируй интефрейс Mapper с типами String и List<String>
 Метод преобразования должен разбивать входящую строку по символу пробела и возвращать список из полученных слов.
 */
 class PhrasesToListOfStrings :Mapper<String, List<String>> {

@@ -3,7 +3,8 @@ package lesson21.HomeWork21
 import lesson21.HomeWork21.Validator.Validator
 
 /*Создай класс ListValidator
-с дженериком, ограниченным типом Number
+с дженериком,
+ограниченным типом Number
 имплементируй интерфейс Validator
 типизированный по типу List с nullable типом дженерика класса
 Реализуй проверку:

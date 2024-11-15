@@ -1,6 +1,7 @@
 package lesson21.HomeWork21
 
-interface Mapper<T,R> {
+interface Mapper<T,R>
+{
     fun map (change :T):R
 
 
