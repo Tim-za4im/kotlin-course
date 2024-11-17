@@ -9,29 +9,63 @@ fun main() {
 
 
     val exampleW = 'W'
-    exampleW.resultNumbers(5,7,true)
+    exampleW.resultNumbers(5, 7, true)
 
 
-    val listWords:MutableList<String?> = mutableListOf("Hello", "world", "Kotlin")
-    val newWordsA = listWords.addLikst("Home work Just do it",2)
- println("Добавления слова : ${listWords.joinToString()}\n Добавленное слово : $newWordsA\n")
+    val listWords: MutableList<String?> = mutableListOf("Hello", "world", "Kotlin")
+    val newWordsA = listWords.addLikst("Home work Just do it", 2)
+    println("Добавления слова : ${listWords.joinToString()}\n Добавленное слово : $newWordsA\n")
 
-    val countMapA : Map<String,List<String>?> = mapOf(
+    val countMapA: Map<String, List<String>?> = mapOf(
         "A" to listOf("Hello", "World", " Kotlin"),
-        "B" to  null,
+        "B" to null,
         "C" to listOf("HomeWork")
     )
     println("${countMapA.countElements()}\n")
 
 
-
-    val numberPlus: Long?=548L
-    val numberMinus :Long?= - 234L
-    val numberNull : Long?=null
+    val numberPlus: Long? = 548L
+    val numberMinus: Long? = -234L
+    val numberNull: Long? = null
 
     println(numberPlus.positivOrNegativ())
     println(numberMinus.positivOrNegativ())
-    println(numberNull.positivOrNegativ())
+    println("${numberNull.positivOrNegativ()}\n")
+
+
+    val pairA = Pair(1, "Hello")
+    val pairB = Pair("World", 2)
+    val pairC = Pair(null, "Kotlin")
+    val pairD = Pair(1, null)
+
+    println(pairA.revert())
+    println(pairB.revert())
+    println(pairC.revert())
+    println("${pairD.revert()}\n")
+
+
+    val numbA = 10
+    val numbB = 15.0
+    val numbC = 12.5F
+    val deviation = 1.5
+    println(numbA.within(numbB, deviation))
+    println(numbB.within(numbC, deviation))
+    println(numbC.within(numbA, deviation))
+    println("${numbA.within(numbC, deviation)}\n")
+
+    val textA = " Hello world, Kotlin!"
+    val amount = 2
+    val encrypt = textA.encrypt(amount)
+    val decrypt = encrypt.decrypt(amount)
+    println(" text $textA")
+    println(" Enctypt $encrypt")
+    println("Decrypt $decrypt\n")
+
+
+    val usersTwitters = listOf("гротеск", "Асахи Кобэ","Avocado1", "комната")
+    val word = "пидмаркоз"
+    println("Гитлеh".Hitler(usersTwitters,word))
+
 }
 //    val result = "String with spaces".removeSpaces()
 //    println(result)
