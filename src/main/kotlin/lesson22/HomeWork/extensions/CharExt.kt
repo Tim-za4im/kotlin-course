@@ -7,4 +7,5 @@ fun Char.resultNumbers(a: Int,b:Int,flag: Boolean) {
 
     println("Рузультат положительный : $this\n$a, $b \n$flag = $resultt")}
     else println(" Результат отрицательный, невозможно сделать\n")
+
 }

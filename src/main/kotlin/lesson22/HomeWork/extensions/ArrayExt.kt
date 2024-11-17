@@ -6,4 +6,5 @@ fun Array<Int>.numberCount():
     var oddsNumber = 0
     this.forEach { if (it % 2 == 0) evensNumbers++ else oddsNumber++ }
 return Pair(evensNumbers,oddsNumber)
+
 }
