@@ -150,12 +150,9 @@ fun tryCastToListAndPrint2(h:Any){
     }
 
 
+fun main() {
 
-
-
-
-
-
+}
 
 
 
