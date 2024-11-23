@@ -70,7 +70,7 @@ else -> println("Неизвестный тип данных")
 
 fun  safeCastToList (j : Any): Int {
    val q = j as? List<*>
-return q?.size ?: -1
+return q?.size ?: -1}
 
 
 
@@ -124,7 +124,7 @@ if(simpleList!=null){
 
 
 }
-}
+
 
 
 
@@ -152,6 +152,17 @@ fun tryCastToListAndPrint2(h:Any){
 
 fun main() {
 
+    analyzeDataType("Hello")
+    analyzeDataType(10)
+    analyzeDataType(listOf(1, 2, 3))
+    analyzeDataType(mapOf("a" to 1, "b" to 2))
+
+    println("Квадрат  4: ${squareAny(4)}")
+    println("Квадрат  4.2: ${squareAny(4.2)}")
+    println("Квадрат '5': ${squareAny("5")}")
+
+    val list= listOf(1, 5.5, "3")
+    println("Сумма всех целочисленных (Int) и вещественных (Double) значений: ${sumIntOrDoubleValuesAnyType2 (list)}")
 }
 
 
