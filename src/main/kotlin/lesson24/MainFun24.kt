@@ -73,3 +73,64 @@ import java.io.IOException
 ////    }
 //
 //}
+//try {
+//    val i = "string" as Double
+//} catch (e: Throwable) {
+//    println("ClassCastException")
+//}
+//
+//val i = "123.0".toDouble()
+//println(i)
+//
+//
+//setAge(-1)
+//val file = File("lasjdkljaskldjalkj")
+//file.createNewFile()
+//val i = file.inputStream()
+//i.close()
+//i.read()
+//
+//val list = mutableListOf("")
+//try {
+//    while (true) {
+//        list.add("лралорывлоралоывралоырволарыолвралоырваолроаоырвлоралыорвлаорыл")
+//    }
+//} catch (e: Throwable) {
+//    println("не отдам память")
+//}
+//try {
+//    stack()
+//} catch (e: Throwable) {
+//    println("StackOverFlow")
+//}
+//}
+//
+//class OrderException(message: String) : RuntimeException(message) {
+//}
+//
+//fun setAge(age: Int) {
+//    check(age >= 0) {
+//        "Age could not be negative"
+//    }
+//}
+//
+//fun stack() {
+//    stack()
+//}
+//Задание 1. Воспроизвести фрагменты кода, которые могут привести к возникновению исключений:
+//NullPointerException
+//ArrayIndexOutOfBoundsException
+//ClassCastException
+//NumberFormatException
+//IllegalArgumentException
+//IllegalStateException
+//OutOfMemoryError
+//StackOverflowError
+//
+//Задание 2. Оберни все вызовы из предыдущего задания в блок try-catch и создай для каждого типа ошибки свой catch блок
+//
+//Задание 3. Оберни все вызовы из предыдущего задания в блок try-catch с одним блоком catch для любого типа исключений. Внутри блока catch, используя when, напиши для каждого исключения вывод в консоль специфического сообщения, подходящего под каждый из типов.
+//
+//Задание 4. Создай свой тип исключения в отдельном файле, наследуемый от AssertionError и принимающий текст. Выброси это исключение в main
+//
+//Задание 5. Создай свой тип исключения в отдельном файле, наследуемый от RuntimeException и принимающий ArrayIndexOutOfBoundsException тип в качестве аргумента. Напиши код, который спровоцирует выброс ArrayIndexOutOfBoundsException, перехвати его с помощью try-catch и в блоке catch выведи сообщение в консоль и сделай выброс своего типа исключения.
