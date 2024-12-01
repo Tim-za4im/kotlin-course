@@ -1,10 +1,7 @@
 package lesson25.homeWork25
 
 
-import lesson13.filter
-import lessopackage.format
-import java.util.*
-import kotlin.collections.Map as Ma
+import kotlin.collections.Map
 
 //Задание 1. Создай константу в файле с текстом. Создай функцию, которая ничего не принимает и не возвращает и печатает в консоль текст константы.
 //Создай аналогичную анонимную функцию.
@@ -124,50 +121,159 @@ val unicomType: (List<Int>) -> List<Int> = { it.distinct() }
 // длина которых меньше их значений но больше заданного в функции аргумента.
 // В случае если список получается пустой нужно выкинуть исключение IllegalState.
 //По аналогии с предыдущим заданием выполни трансформации и проверки.
-fun Map<String, Int>.filterKey(j: Int): List<String> {
-    require(j >= 0)
-    { throw Exception(" not minus") }
-    val resultMap = this.filter{ (key, value) ->
-        key.length < value && key.length > j
-    }.keys.toList()
-    if (resultMap.isEmpty())
-        throw IllegalStateException("List keys Emty!")
-    return resultMap
+
+
+//}
+//fun Map<String,Int>.filterKey(j: Int): List<String>{
+//    val resultMap = this.filterKey{ it.length <this[it]!! && it.length > j }.keys.toList()
+//    require(j >= 0)
+//    { throw Exception(" not minus") }
+//    return resultMap
+//}
+//fun Map<String, Int>.keysLength2(minLength: Int): List<String> {
+//    fun Map<String, Int>.keysLength(minLength: Int): List<String> {
+//        val result = this.filterKeys { (key, value) -> key.length < value && key.length > minLength }.keys.toList()
+//
+//        require(result.isNotEmpty()) { "Список не должен быть пустым" }
+//
+//        return result
+//    }
+////        val result = this.filter { (key, value) -> key.length < value && key.length > minLength }.keys.toList()
+////
+////        require(result.isNotEmpty()) { "Список не должен быть пустым" }
+////
+////        return result
+/*fun Map<String, Int>.keysLength(minJ: Int): List<String> {
+    val result = mutableListOf<String>()
+    for ((key, value) in this) {
+        if (key.length < value && key.length > minJ) {
+            result.add(key)
+        }
+    }
+    if (result.isEmpty()) {
+        throw IllegalStateException("list not emty")
+    }
+
+    return result
 }
+val anonymusFunc = fun(map: Map<String, Int>, minJ: Int): List<String> {
+    val result = mutableListOf<String>()
+    for ((key, value) in map) {
+        if (key.length < value && key.length > minJ) {
+            result.add(key)
+        }
+    }
 
-val anonymMap = fun (map: Ma<String,Int>, j:Int): List<String> {
-    require(j >= 0)
-    { throw Exception(" not minus") }
-    val resultMap = map.filter { (key, value) ->
-        key.length < value && key.length > j
-    }.keys.toList()
-    if (resultMap.isEmpty())
-        throw IllegalStateException("List keys Emty!")
-    return resultMap
+    if (result.isEmpty()) {
+        throw IllegalStateException("list not emty")
+    }
 
+    return result
 }
+val keyFunction3 = { map: Map<String, Int>, minJ: Int ->
+    val result = mutableListOf<String>()
+    for ((key, value) in map) {
+        if (key.length < value && key.length > minJ) {
+            result.add(key)
+        }
+    }
+
+    if (result.isEmpty()) {
+        throw IllegalStateException("list no emty" +
+                "")
+    }
+
+    result
+}*/
 
 
-val filterMap2 : (map: Ma<String,Int>, j:Int) ->
-                  List<String> = { map, j ->
-    require(j >= 0)
-    { throw Exception(" not minus") }
-    val resultMap = map.filter { (key, value) ->
-        key.length < value && key.length > j
-    }.keys.toList()
-    if (resultMap.isEmpty())
-        throw IllegalStateException("List keys Emty!")
-    resultMap}
+//val anonymMap = fun (map: Map<String,Int>, j:Int): List<String> {
+//    require(j >= 0)
+//    { throw Exception(" not minus") }
+//    val resultMap = map.filter { (key, value) ->
+//        key.length < value && key.length > j
+//    }.keys.toList()
+//    if (resultMap.isEmpty())
+//        throw IllegalStateException("List keys Emty!")
+//    return resultMap
+//}
+//
+//val filterMap2 : (map: Map<String,Int>, j:Int) ->
+//List<String> = { map, j ->
+//    require(j >= 0)
+//    { throw Exception(" not minus") }
+//    val resultMap = map.filter { (key, value) ->
+//        key.length < value && key.length > j
+//    }.keys.toList()
+//    if (resultMap.isEmpty())
+//    throw IllegalStateException("List keys Emty!")
+//    resultMap}
+////val filterMapkey3  = { map: Map<String,Int>, j:Int ->
+////    require(j >= 0)
+//    { throw Exception(" not minus") }
+//    val resultMap = map.filter { (key, value) ->
+//        key.length < value && key.length > j
+//    }.keys.toList()
+//    if (resultMap.isEmpty())
+//    throw IllegalStateException("List keys Emty!")
+//    resultMap}
 
-val filterMapkey3  = { map: Ma<String,Int>, j:Int ->
-        require(j >= 0)
-        { throw Exception(" not minus") }
-        val resultMap = map.filter { (key, value) ->
-            key.length < value && key.length > j
-        }.keys.toList()
-        if (resultMap.isEmpty())
-            throw IllegalStateException("List keys Emty!")
-        resultMap}
+//Создай функцию расширения словаря из списка и множества,
+// которая принимает все известные тебе типы (вспомни все что знаешь и под каждый тип создай аргумент)
+// и возвращает строку.
+// Функция должна распечатать все данные, которые тебе в ней доступны и вернуть конкатенацию всех данных которые ей доступны (порядок неважен).
+// Конкатенация - это присоединение. Код должен быть отформатирован таким образом, чтобы легко читался.
+//По аналогии с предыдущим заданием выполни трансформации.
+fun Any.SetList(
+    list: List<Any>,
+    set: Set<Any>,
+    map: Map<Any, Any>,
+    number: Number,
+    string: String,
+    boolean: Boolean,
+    char: Char
+): String {
+
+
+    val ListConcaten = list.joinToString(" , ")
+    val setConcaten=set.joinToString(", ")
+    val mapConcaten =map.flatMap { listOf("${it.key}=${it.value}") }.joinToString(", ")
+    val numbConcaten = "$number"
+    val stringConcaten = "$string"
+    val booleanConcaten= "$boolean"
+    val charConcaten= "$char"
+
+    return  "List : $ListConcaten \nSet :$setConcaten \nMap : $mapConcaten \nNumber: $numbConcaten\nString: $stringConcaten\nBoolean : $booleanConcaten \n Char: $charConcaten"}
+
+val anyAnonymContacten :(List<Any>, Set<Any>, Map<Any, Any>, Number, String, Boolean, Char) -> String = fun(
+    list, set, map, number, str, boolean, char
+): String {val ListConcaten = list.joinToString(" , ")
+    val setConcaten=set.joinToString(", ")
+    val mapConcaten =map.flatMap { listOf("${it.key}=${it.value}") }.joinToString(", ")
+    val numbConcaten = "$number"
+    val stringConcaten = "$str"
+    val booleanConcaten= "$boolean"
+    val charConcaten= "$char"
+
+    return  "List : $ListConcaten \nSet :$setConcaten \nMap : $mapConcaten \nNumber: $numbConcaten\nString: $stringConcaten\nBoolean : $booleanConcaten \n Char: $charConcaten"}
+
+val anyConcantionType ={
+        list: List<Any>,
+        set: Set<Any>,
+        //map: Map<String, Any>,
+        number: Number,
+        str: String,
+        boolean: Boolean,
+        char: Char ->
+    val ListConcaten = list.joinToString(" , ")
+    val setConcaten=set.joinToString(", ")
+    //val mapConcaten =map.flatMap { listOf("${it.key}=${it.value}") }.joinToString(", ")
+    val numbConcaten = "$number"
+    val stringConcaten = "$str"
+    val booleanConcaten= "$boolean"
+    val charConcaten= "$char"
+    "List : $ListConcaten \nSet :$setConcaten  \nNumber: $numbConcaten\nString: $stringConcaten\nBoolean : $booleanConcaten \n Char: $charConcaten"}
+
 
 fun main() {
 
@@ -235,23 +341,48 @@ fun main() {
     println("\n")
 
 
-    val  testMap= mapOf(
-        "Hello" to 4,
-        "World" to 3,
-        "Kotlin" to 2,
-        "Map Test" to 5,
-        "TestingMaps" to 7
-    )
-    val zeoMap = mapOf<String,Int>()
-    println(testMap.filterKey(2))
-    println(anonymMap(testMap,3))
-    println(filterMap2(testMap,4))
-    try {
-        println(filterMapkey3(zeoMap,1))}
-    catch (e:IllegalStateException){
-        println("Erorr ${e}")
-    }
 
+//    val testMap = mapOf(
+//        "Hello" to 4,
+//        "World" to 3,
+//        "Kotlin" to 2,
+//        "Map Test" to 5,
+//        "TestingMaps" to 7
+//    )
+//    val zeroMap = mapOf<String, Int>()
+//
+//
+//    val result1 = testMap.keysLength(8)
+//    println("keysLength result: $result1")
+//
+//    val result2 = anonymusFunc(testMap, 4)
+//    println("anonymusFunc result: $result2")
+//
+//    val result3 = keyFunction3(testMap, 2)
+//    println("keyFunction3 result: $result3")
+// println("\n")
+
+
+
+    val listtest = listOf(11,55,23,"Kotlin")
+    val setTest = setOf("Hello", " Wrold,", "Home", "Work")
+    val mapTest = mapOf("Age " to 18, "Name" to " Boris", "Country"  to "Japan") as Map <Any,Any>
+    val numberTest = 1465
+    val strTest = " Test string Example"
+    val booleanTest= true
+    val charTest = 'W'
+
+    val resulAny= Any().SetList (listtest,setTest,mapTest,numberTest,strTest,booleanTest,charTest)
+    println("Concation all type : $resulAny")
     println("\n")
 
+    val resultAnyAnonymContacten =anyAnonymContacten(listtest,setTest,mapTest,numberTest,strTest,booleanTest,charTest)
+    println("Contaction 2 anonymus $resultAnyAnonymContacten")
+    println("\n")
+
+    val resultAnyConcantionType = anyConcantionType(listtest,setTest,numberTest,strTest,booleanTest,charTest)
+    println("Concation 3 Lamda $resultAnyConcantionType")
+
 }
+
+
