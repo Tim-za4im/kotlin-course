@@ -109,8 +109,24 @@ val sumByCondition2 :(List<Int>, (Int) ->Boolean )-> Int = {listnumbers,func ->
 val sumByCondition3 = {listnumbers : List<Int>, func : (Int) ->Boolean ->
      listnumbers.filter(func).sum()}
 
-//fun combineAndTransform(listA:List<Int>, listB:List<Int>,combine:(Int,Int)->Int,transform: (Int)->String):List<String>{ }
+//fun combineAndTransform(listA:List<Int>,
+// listB:List<Int>,
+//  combine:(Int,Int)->Int,transform: (Int)->String):List<String>{ }
+fun <T,K>combineAndTransform(
+    colA :List<T>,
+     colB:List<K>,
+    funUni:(List<T>,List<K>) -> List<K>
+): List<K>{
 
+    return funUni(colA,colB)}
+
+fun <A,B,C:Collection<A>,D:Collection<B>> combineAndTransform2(
+    colC:C,
+    colD:C,
+    funUni2: (C,C)->D
+):D{
+    val sumF=colC+colD
+    return funUni2(colC,colD)}
 
 fun main() {
 
@@ -136,4 +152,9 @@ fun main() {
     println(result3a)
     println(result3b)
     println("\n")
+
+
+    val listA = listOf("a", "b", "c")
+    val listB = listOf(1, 2, 3)
+
 }
