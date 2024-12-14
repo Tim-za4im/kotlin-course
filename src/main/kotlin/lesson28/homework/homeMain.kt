@@ -98,30 +98,72 @@ fun main() {
     task6(task6Direction)
 println("\n")
 
-    val task7 =File("task9/docs")
-    val read7 = ("task9/docs/readme.md")
-    val newDirectt = (task7)
+    val task7 = File("task9/docs")
+    val read7 = "task9/docs/readme.md"
+    val newDirectt = task7
+
     if (!newDirectt.exists()) {
         newDirectt.mkdirs()
-        println("Директоррия есть $task7")
+        println("Директория создана: $task7")
     }
+
     val file77 = File(read7).apply {
-    if (!exists()) {
-        createNewFile()
-        writeText("This is a README file.")
-        println("README file есть")
-    }else{
-        println("README file не существует")}}
+        if (!exists()) {
+            createNewFile()
+            writeText("This is a README file.")
+            println("Файл readme.md создан и заполнен текстом.")
+        } else {
+            println("Файл readme.md уже существует.")
+        }
+    }
+
+
+//    val task7 =File("task9/docs")
+//    val read7 = ("task9/docs/readme.md")
+//    val newDirectt = (task7)
+//    if (!newDirectt.exists()) {
+//        newDirectt.mkdirs()
+//        println("Директоррия есть $task7")
+//    }
+//    val file77 = File(read7).apply {
+//    if (!exists()) {
+//        createNewFile()
+//        writeText("This is a README file.")
+//        println("README file есть")
+//    }else{
+//        println("README file не существует")}}
 
 
     val task8 = File("task10")
     val file8 = File("task10/data/1/4/prod/data14.mysql")
     val file8A = File("task10/data/2/3/prod/data14.mysql")
     val file8B = File("task10/data/5/2/prod/data14.mysql")
-    val task10Backup = File("task10/backup")
-    if(!task10Backup.exists()){
-        task10Backup.mkdirs()
+
+    val allFilesList = listOf(file8,file8A,file8B)
+
+
+    allFilesList.forEach { all->
+        all.parentFile.mkdirs()
+        println("File created ${all.absolutePath}")
     }
+    val task10Backup = File("task10/backup")
+task10Backup.mkdirs()
+    allFilesList.forEach { sourceFile ->
+        if (sourceFile.exists()){
+        val pathCopy: File = sourceFile.relativeTo(task8)
+        val targetFile = File(task10Backup, pathCopy.path)
+
+        targetFile.parentFile.mkdirs()
+        sourceFile.copyTo(targetFile, overwrite = true)
+        println("File copied: ${sourceFile.absolutePath} -> ${targetFile.absolutePath}")
+    } else{
+            println("File do not exist ${sourceFile.absolutePath}")
+    }}}
+
+
+
+
+
 
 
 
@@ -134,7 +176,7 @@ println("\n")
 
 
 
-    }
+
 
 
 
