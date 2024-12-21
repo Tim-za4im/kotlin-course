@@ -7,7 +7,7 @@ import kotlin.math.E
 enum class TestStatus {
     PASS,
     BROKEN,
-    FAILURE
+    FAILURE,;
 }
 
 enum class HouseType(val houseType2: String) {
