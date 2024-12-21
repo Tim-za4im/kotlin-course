@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+
     implementation("com.google.code.gson:gson:2.10.1")
     testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")

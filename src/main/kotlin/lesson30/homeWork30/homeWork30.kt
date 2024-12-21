@@ -7,14 +7,14 @@ import kotlin.math.E
 enum class TestStatus {
     PASS,
     BROKEN,
-    FAILURE,;
+    FAILURE, ;
 }
 
 enum class HouseType(val houseType2: String) {
     ROOM0("Комната"),
-    ROOM1("Однушка"),
-    ROOOM2("Двушка"),
-    ROOM3("Трёшка"),
+    ROOM1("однокомнатная"),
+    ROOOM2("двухкомнатная"),
+    ROOM3("трёхкомнатная "),
     PANTHOUSE("ПэнтХаус"), ;
 }
 
@@ -56,11 +56,12 @@ fun planetFilter(planetFun: (PlaneSystem) -> Boolean): PlaneSystem {
 fun main() {
 
     val task3A = testTask3 { println("Hello World!") }
-    println(task3A)
     println("\n")
+    println(task3A)
+
     val task3B = testTask3 { throw AssertionError("Fail") }
     println(task3B)
-    println("\n")
+
     val task3C = testTask3 { throw IllegalArgumentException("Wrong enter!") }
     println(task3C)
     println("\n")
@@ -68,5 +69,7 @@ fun main() {
     val massPlanet = planetFilter { i ->
         i.mass == PlaneSystem.values().maxOf { it.mass }
     }
-println(massPlanet)
+    println(massPlanet)
+    println("\n")
+    housePrintLong()
 }
